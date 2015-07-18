@@ -1,6 +1,7 @@
 package com.sam.testing;
 
 
+import com.sam.testing.config.ConfigHandler;
 import com.sam.testing.proxy.IProxy;
 import com.sam.testing.reference.Reference;
 import com.sam.testing.utility.LogHelper;
@@ -16,13 +17,14 @@ public class testing
     @Mod.Instance(Reference.MOD_ID)
     public static testing instance;
 
-    @SidedProxy(clientSide = "com.sam.testing.proxy.ClientProxy", serverSide = "com.sam.testing.proxy.ServerProxy")
+    @SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
     public static IProxy proxy;
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
         LogHelper.info("Loading " + Reference.MOD_NAME);
+        ConfigHandler.init(event.getSuggestedConfigurationFile());
     }
 
     @Mod.EventHandler
