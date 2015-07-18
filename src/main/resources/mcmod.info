@@ -1,0 +1,16 @@
+[
+{
+  "modid": "testing",
+  "name": "A Test mod",
+  "description": "",
+  "version": "1.0",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["sam2864", "sam"],
+  "credits": "Pahimar and bedrockminer for tutorials",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
