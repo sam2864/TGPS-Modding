@@ -3,6 +3,7 @@ package com.sam.testing;
 
 import com.sam.testing.proxy.IProxy;
 import com.sam.testing.reference.Reference;
+import com.sam.testing.utility.LogHelper;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -21,7 +22,7 @@ public class testing
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
-
+        LogHelper.info("Loading " + Reference.MOD_NAME);
     }
 
     @Mod.EventHandler
