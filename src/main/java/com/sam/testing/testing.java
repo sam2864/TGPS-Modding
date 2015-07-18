@@ -1,17 +1,19 @@
 package com.sam.testing;
 
 
-import com.sam.testing.config.ConfigHandler;
+import com.sam.testing.handler.ConfigHandler;
 import com.sam.testing.proxy.IProxy;
 import com.sam.testing.reference.Reference;
 import com.sam.testing.utility.LogHelper;
+import com.sam.testing.utility.OredictHelper;
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(modid=Reference.MOD_ID, name=Reference.MOD_NAME, version=Reference.VERSION)
+@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION, guiFactory = Reference.GUI_FACTORY_CLASS)
 public class testing
 {
     @Mod.Instance(Reference.MOD_ID)
@@ -25,6 +27,7 @@ public class testing
     {
         LogHelper.info("Loading " + Reference.MOD_NAME);
         ConfigHandler.init(event.getSuggestedConfigurationFile());
+        FMLCommonHandler.instance().bus().register(new ConfigHandler());
     }
 
     @Mod.EventHandler
@@ -38,6 +41,9 @@ public class testing
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event)
     {
-
+        if(ConfigHandler.DumpItemsToConsole)
+        {
+            OredictHelper.dumpAllItems();
+        }
     }
 }
