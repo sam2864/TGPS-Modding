@@ -2,13 +2,13 @@
 {
   "modid": "testing",
   "name": "A Test mod",
-  "description": "",
+  "description": "A test mod created by me, sam for an example",
   "version": "1.0",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
   "authorList": ["sam2864", "sam"],
-  "credits": "Pahimar and bedrockminer for tutorials",
+  "credits": "Pahimar, for tutorials and some code",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
