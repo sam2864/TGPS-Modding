@@ -2,6 +2,7 @@ package com.sam.testing;
 
 
 import com.sam.testing.handler.ConfigHandler;
+import com.sam.testing.init.ModItems;
 import com.sam.testing.proxy.IProxy;
 import com.sam.testing.reference.Reference;
 import com.sam.testing.utility.LogHelper;
@@ -28,6 +29,7 @@ public class testing
         LogHelper.info("Loading " + Reference.MOD_NAME);
         ConfigHandler.init(event.getSuggestedConfigurationFile());
         FMLCommonHandler.instance().bus().register(new ConfigHandler());
+        ModItems.init();
     }
 
     @Mod.EventHandler
