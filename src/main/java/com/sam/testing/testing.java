@@ -2,6 +2,7 @@ package com.sam.testing;
 
 
 import com.sam.testing.handler.ConfigHandler;
+import com.sam.testing.init.ModBlocks;
 import com.sam.testing.init.ModItems;
 import com.sam.testing.proxy.IProxy;
 import com.sam.testing.reference.Reference;
@@ -30,6 +31,7 @@ public class testing
         ConfigHandler.init(event.getSuggestedConfigurationFile());
         FMLCommonHandler.instance().bus().register(new ConfigHandler());
         ModItems.init();
+        ModBlocks.init();
     }
 
     @Mod.EventHandler

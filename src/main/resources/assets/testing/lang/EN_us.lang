@@ -1,1 +1,3 @@
 item.testing:mapleLeaf.name=Maple leaf
+tile.testing:flag.name=The Flag of flagness
+itemGroup.testing=A test mod

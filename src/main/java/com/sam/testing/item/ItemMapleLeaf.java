@@ -1,6 +1,6 @@
 package com.sam.testing.item;
 
-public class ItemMapleLeaf extends ItemWrapper
+public class ItemMapleLeaf extends ItemTesting
 
 {
     public ItemMapleLeaf()

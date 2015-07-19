@@ -1,5 +1,6 @@
 package com.sam.testing.item;
 
+import com.sam.testing.creativetab.CreativeTabTesting;
 import com.sam.testing.reference.Textures;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -7,14 +8,14 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
-public class ItemWrapper extends Item
+public class ItemTesting extends Item
 
 {
-    public ItemWrapper()
+    public ItemTesting()
     {
         super();
-        this.maxStackSize = 1;
-        // this.setCreativeTab(CreativeTab.TEST_TAB);
+        this.maxStackSize = 64;
+        this.setCreativeTab(CreativeTabTesting.TEST_TAB);
         this.setNoRepair();
     }
 
