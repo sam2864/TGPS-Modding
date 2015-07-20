@@ -4,6 +4,7 @@ package com.sam.testing;
 import com.sam.testing.handler.ConfigHandler;
 import com.sam.testing.init.ModBlocks;
 import com.sam.testing.init.ModItems;
+import com.sam.testing.init.Recipe;
 import com.sam.testing.proxy.IProxy;
 import com.sam.testing.reference.Reference;
 import com.sam.testing.utility.LogHelper;
@@ -37,6 +38,8 @@ public class testing
     @Mod.EventHandler
     public void init(FMLInitializationEvent event)
     {
+        Recipe.init();
+
 
     }
 

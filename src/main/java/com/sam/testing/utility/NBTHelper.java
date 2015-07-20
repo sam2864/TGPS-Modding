@@ -12,7 +12,6 @@ public class NBTHelper
     {
         return itemStack != null && itemStack.stackTagCompound != null && itemStack.stackTagCompound.hasKey(keyName);
     }
-
     public static void removeTag(ItemStack itemStack, String keyName)
     {
         if (itemStack.stackTagCompound != null)
@@ -20,7 +19,6 @@ public class NBTHelper
             itemStack.stackTagCompound.removeTag(keyName);
         }
     }
-
     /**
      * Initializes the NBT Tag Compound for the given ItemStack if it is null
      *

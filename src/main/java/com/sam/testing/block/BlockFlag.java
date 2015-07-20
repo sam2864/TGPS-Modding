@@ -10,6 +10,7 @@ public class BlockFlag extends BlockTesting
         super();
         this.setBlockName("flag");
         this.setCreativeTab(CreativeTabTesting.TEST_TAB);
-        
+        this.setHarvestLevel("ItemPickaxe", 2);
+        this.setHardness(4);
     }
 }
