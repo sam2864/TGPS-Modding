@@ -1,3 +1,13 @@
+#Keys
+keys.testing.category=Testing
+keys.testing.charge=Charge
+keys.testing.release=Release
+
+#Items
 item.testing:mapleLeaf.name=Maple leaf
+
+#Blocks
 tile.testing:flag.name=The Flag of flagness
+
+#Creative tabs
 itemGroup.testing=A test mod

@@ -1,6 +1,7 @@
 package com.sam.testing;
 
 
+import com.sam.testing.client.handler.KeyInputEventHandler;
 import com.sam.testing.handler.ConfigHandler;
 import com.sam.testing.init.ModBlocks;
 import com.sam.testing.init.ModItems;
@@ -31,14 +32,17 @@ public class testing
         LogHelper.info("Loading " + Reference.MOD_NAME);
         ConfigHandler.init(event.getSuggestedConfigurationFile());
         FMLCommonHandler.instance().bus().register(new ConfigHandler());
+
         ModItems.init();
         ModBlocks.init();
+        proxy.registerKeyBindings();
     }
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event)
     {
         Recipe.init();
+        FMLCommonHandler.instance().bus().register(new KeyInputEventHandler());
 
 
     }
